@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parallax Scrolling Website by Listia </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Listia</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#main">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="star.png" id="star">
+            <img src="moon.png" id="moon">
+            <img src="mountain_behind.png" id="mountain_behind">
+            <h2 id="text">Welcome</h2>
+            <a href="#main" id="btn">Explore</a>"
+            <img src="mountain_front.png" id="mountain_front">
+        </section>
+        <div class="main" id="main">
+            <img src="photo.png">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut architecto eligendi officiis dolorem, consequatur at aliquam laudantium ab aliquid, perspiciatis tenetur tempore magnam. Rem iusto optio culpa quos vitae voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, aliquid voluptatibus recusandae quos, quo sed est incidunt voluptates ab dignissimos, eveniet quidem repellat qui aliquam soluta porro suscipit odio deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis et similique error reprehenderit deleniti, quis iusto aliquam beatae obcaecati doloremque eaque maxime corrupti tenetur, placeat sunt doloribus cupiditate voluptate. Ipsam.</p>
+            <button type="button" href="https://stackoverflow.com/questions/17219757/how-to-place-text-and-an-image-next-to-each-other-in-html">Download My CV</button>
+        </div>
+    <!----Animation in Homepage--->
+    <script>
+        let star = document.getElementById('star');
+        let moon = document.getElementById('moon');
+        let mountain_behind = document.getElementById('mountain_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountain_front = document.getElementById('mountain_front');
+        let header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            star.style.left = value + 'px';
+            moon.style.top = value * 1.5 + 'px';
+            mountain_behind.style.top = value * 0.5 + 'px';
+            mountain_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1 + 'px';
+            btn.style.marginTop = value * 1 + 'px';
+            btn.style.marginLeft = value * 4 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+    <!--Work section-->
+        <div class="work">
+        <div class="title">
+            <h2>My Recent Work</h2>
+        </div>
+        <div class="box">
+            <div class="card">
+                <img src="http://placehold.it/275x170">
+                <h5 href="#">Data Visualization</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium officia qui quia aliquid expedita iste odio maxime.</p>
+            </div>
+            <div class="card">
+                <img src="http://placehold.it/275x170">
+                <h5 href="#">Graphic Design</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium officia qui quia aliquid expedita iste odio maxime.</p>
+            </div>
+            <div class="card">
+                <img src="http://placehold.it/275x170">
+                <h5 href="#">UI/UX</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium officia qui quia aliquid expedita iste odio maxime.</p>
+            </div>
+        </div>
+    <!---Contact Me-->
+    <div class="contact-me">
+        <h2>Contact Me</h2>
+        <div class="emailme">
+            <form>
+                <input type="text" name="name" id="name" placeholder="Your Name">
+                <input type="email" name="email" id="email" placeholder="Your Email">
+                <input type="text" name="message" id="message" placeholder="Message">
+                <input type="submit" name="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer>
+        <h5>Listia Wahyu Tri W</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore commodi consequatur libero nulla? Veniam reiciendis est incidunt, a fugit mollitia ad in, eos iusto, culpa doloremque expedita ab amet numquam.</p>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p class="end" >Copyright by Listia Wahyu</p>
+    </footer>
+    </body>
+</html>
